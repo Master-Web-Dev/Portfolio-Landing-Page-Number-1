@@ -1,0 +1,168 @@
+/* =============================================================================================== */
+/* ======================================= Main Styles =========================================== */
+/* =============================================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+::selection {
+    background: crimson;
+    color: #fff;
+}
+
+img {
+    pointer-events: none;
+}
+
+/* =============================================================================================== */
+/* ======================================= Landing Page ========================================== */
+/* =============================================================================================== */
+
+.landingPage {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landingPage .topSide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landingPage .topSide .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingPage .topSide .logo a img {
+    width: 100px;
+}
+
+.landingPage .topSide .logo a p.websiteName {
+    font-size: 21px;
+    color: #dc143c;
+}
+
+.landingPage .topSide .freelancerName p {
+    font-size: 32px;
+    color: crimson;
+    text-align: right;
+}
+
+.landingPage .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+.landingPage .navBar a.link {
+    transition: all 0.2s ease-in-out;
+}
+
+.landingPage .navBar a.link:hover {
+    color: crimson;
+    text-decoration: underline;
+}
+
+.landingPage .mainImage {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    max-width: 50%;
+}
+
+.landingPage .mainImage img {
+    max-width: 100%;
+}
+
+.landingPage .bottomLeftSide {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.landingPage .bottomLeftSide p.job {
+    font-size: 32px;
+}
+
+.landingPage .bottomLeftSide p.location {
+    font-size: 21px;
+    color: #ccc;
+}
+
+.landingPage .bottomLeftSide p.location span {
+    color: crimson;
+}
+
+.landingPage .bottomRightSide {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.landingPage .bottomRightSide a i {
+    font-size: 21px;
+    transition: all 0.2s ease-in-out;
+}
+
+.landingPage .bottomRightSide a i:hover {
+    color: crimson;
+}
+
+/* =============================================================================================== */
+/* ======================================= Responsive ============================================ */
+/* =============================================================================================== */
+
+@media screen and (max-width: 768px) {
+    .landingPage .topSide .freelancerName {
+        display: none;
+    }
+
+    .landingPage .mainImage {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .landingPage .bottomLeftSide {
+        bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .landingPage .mainImage {
+        display: none;
+    }
+}
